@@ -31,7 +31,7 @@
                     </div>
                 </button>
                 <ul class="navbar__list">
-                    <li><a class="navbar__item-active" href="#">Главная</a></li>
+                    <li><a class="navbar__item" href="#" data-section="home">Главная</a></li>
                     <li><a href="index.html#">Каталог франшиз</a></li>
                     <li><a href="index.html#">О франчайзере</a></li>
                     <li><a href="index.html#">Выгоды</a></li>
@@ -41,17 +41,15 @@
                     <li><a href="index.html#">Эксперты</a></li>
                     <li><a href="index.html#">Поддержка</a></li>
                     <li><a href="index.html#">Бизнес трекинг</a></li>
-                    <li><a href="index.html#">Тарифы</a></li>
-                    <li><a href="index.html#">Роялти</a></li>
-                    <li><a href="index.html#">Паушальный взнос</a></li>
-                    <li><a href="index.html#">Условия</a></li>
-                    <li><a href="index.html#">Заработок</a></li>
-                    <li><a href="index.html#">Для кого</a></li>
-                    <li><a href="index.html#">Этапы</a></li>
-                    <li><a href="index.html#">Кейсы</a></li>
-                    <li><a href="index.html#">Гарантии</a></li>
-                    <li><a href="index.html#">FAQ</a></li>
-                    <li><a href="index.html#">Акция</a></li>
+                    <li><a class="navbar__item" href="#" data-section="rates">Тарифы</a></li>
+                    <li><a class="navbar__item" href="#" data-section="royalty">Роялти</a></li>
+                    <li><a class="navbar__item" href="#" data-section="poush">Паушальный взнос</a></li>
+                    <li><a class="navbar__item" href="#" data-section="profit">Заработок</a></li>
+                    <li><a class="navbar__item" href="#" data-section="steps">Этапы</a></li>
+                    <li><a class="navbar__item" href="#" data-section="case">Кейсы</a></li>
+                    <li><a class="navbar__item" href="#" data-section="guarantees">Гарантии</a></li>
+                    <li><a class="navbar__item" href="#" data-section="faq">FAQ</a></li>
+                    <li><a class="navbar__item" href="#" data-section="share">Акция</a></li>
                 </ul>
                 <p class="navbar__phone">+7 707 336 66 65</p>
                 <div class="navbar__buttons">
@@ -65,7 +63,7 @@
             </div>
         </nav>
         <main class="main">
-            <section class="trafficGeneration">
+            <section class="trafficGeneration" id="home">
                 <div class="trafficGeneration__container">
                     <div class="trafficGeneration__info">
                         <div class="trafficGeneration__subcontainer">
@@ -109,7 +107,7 @@
                     </div>
                 </div>
             </section>
-            <section class="rates">
+            <section class="rates" id="rates">
                 <div class="rates__container">
                     <h1 class="rates__title">Тарифы</h1>
                     <div class="rates__info">
@@ -224,7 +222,7 @@
                     </div>
                 </div>
             </section>
-            <section class="royalty">
+            <section class="royalty" id="royalty">
                 <div class="royalty__container">
                     <h1 class="royalty__title">Что входит в Роялти?</h1>
                     <div class="card__team">
@@ -347,7 +345,7 @@
                     </div>
                 </div>
             </section>
-            <section class="poush">
+            <section class="poush" id="poush">
                 <div class="poush__container">
                     <h1 class="poush__title">Что входит в паушальный взнос</h1>
                     <div class="poush__list">
@@ -436,44 +434,395 @@
                     </div>
                 </div>
             </section>
-            <section class="profit">
+            <section class="profit" id="profit">
                 <div class="profit__container">
                     <h1 class="profit__title">Расчёт прибыли</h1>
                     <div class="profit__func">
-                        <p class="profit__func-var">Туры</p>
-                        <p class="profit__func-var active">Дети</p>
-                        <p class="profit__func-var">Digital</p>
-                        <p class="profit__func-var">Ин. Языки</p>
-                        <p class="profit__func-var">Кухни</p>
-                        <p class="profit__func-var">Мяг. мебель</p>
-                        <p class="profit__func-var">Стройка</p>
-                        <p class="profit__func-var">Интерьер</p>
+                        <p class="profit__func-var" onclick="toggleActive(this)">Туры</p>
+                        <p class="profit__func-var" onclick="toggleActive(this)">Дети</p>
+                        <p class="profit__func-var" onclick="toggleActive(this)">Digital</p>
+                        <p class="profit__func-var" onclick="toggleActive(this)">Ин. Языки</p>
+                        <p class="profit__func-var active" onclick="toggleActive(this)">Кухни</p>
+                        <p class="profit__func-var" onclick="toggleActive(this)">Мяг. мебель</p>
+                        <p class="profit__func-var" onclick="toggleActive(this)">Стройка</p>
+                        <p class="profit__func-var" onclick="toggleActive(this)">Интерьер</p>
                     </div>
                     <div class="profit__content">
                         <div class="profit__content-title">
-                            <p> Франшиза: </p>
-                            <p>кухни</p>
+                            <p> Франшиза: <span>кухни</span> </p>
                         </div>
                         <div class="profit__content-calc">
                             <div class="profit__content-calc-info">
+                                <div>
+                                    <p>Средний чек, тг</p>
+                                    <span>3000</span>
+                                </div>
 
+                                <div>
+                                    <p>Маржа, тг</p>
+                                    <span>3000</span>
+                                </div>
+                                <div>
+                                    <p>Прибыль, тг</p>
+                                    <span>3000</span>
+                                </div>
                             </div>
                             <div class="profit__content-calc-slider">
-                                <input type="range" min="0" max="30" value="15" class="slider" id="mySlider">
-                                <p>Значение: <span id="sliderValue">15</span></p>
+                                <input type="range" min="0" max="100" value="50" class="slider" id="mySlider">
+                                <div class="slider-container">
+                                    <p class="profit__slider">
+                                        Значение: <span id="sliderText">15</span>
+                                    </p>
+                                </div>
                             </div>
                             <div class="profit__content-calc-btn">
-                                <button></button>
+                                <button>Скачать бизнес-план</button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="guarantees" id="guarantees">
+                <div class="guarantess__container">
+                    <h1 class="guarantess__title">Гарантии</h1>
+
+                    <div class="gurantess__row">
+                        <div class="guarantess__card">
+                            <img src="./img/guarants.svg" alt="">
+                            <h1>Право перепродажи франшизы</h1>
+                            <div></div>
+                            <p>- если вы решили прекратить сотрудничество.</p>
+                        </div>
+                        <div class="guarantess__card">
+                            <img src="./img/guarants.svg" alt="">
+                            <h1>Право не платить роялти</h1>
+                            <div></div>
+                            <p>- если у вас не будет заявок.</p>
+                        </div>
+                        <div class="guarantess__card">
+                            <img src="./img/guarants.svg" alt="">
+                            <h1>Право сменить
+                                франшизу</h1>
+                            <div></div>
+                            <p>- на другую нашу франшизу бесплатно, если ниша вам не понравилась.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="case" id="case">
+                <div class="case__container">
+                    <h1 class="case__title">Кейсы</h1>
+                    <div class="case__list">
+                        <div class="case__card">
+                            <div class="case__card-img">
+                                <img class="case__card-image1" src="/Главная страница/img/case_1 1.svg" alt="">
+                            </div>
+                            <div class="case__card-info">
+                                <div class="case__card-title">
+                                    <p class="case__card-title-text">Партнер\франчайзи</p>
+                                    <p class="case__card-title-city"> г. Орёл</p>
+
+                                </div>
+                                <div class="case__line"></div>
+                                <div class="case__card-profit">
+
+                                </div>
+                                <div class="case__line"></div>
+                                <div class="case__card-disc">
+                                    Мне всегда нравилась идея иметь свой собственный бизнес и зарабатывать столько,
+                                    сколько я хочу.
+                                </div>
+
+                                <button class="case__card-btn">Подробнее ></button>
+                            </div>
+                        </div>
+                        <div class="case__card">
+                            <div class="case__card-img">
+                                <img src="/Главная страница/img/case_2.svg" alt="">
+                            </div>
+                            <div class="case__card-info">
+                                <div class="case__card-title">
+                                    <p class="case__card-title-text">Партнер\франчайзи</p>
+                                    <p class="case__card-title-city"> г. Орёл</p>
+                                </div>
+                                <div class="case__line"></div>
+                                <div class="case__card-profit">
+                                </div>
+                                <div class="case__line"></div>
+                                <div class="case__card-disc">
+                                    Мне всегда нравилась идея иметь свой собственный бизнес и зарабатывать столько,
+                                    сколько
+                                    я хочу.
+                                </div>
+                                <button class="case__card-btn">Подробнее ></button>
+                            </div>
+
+                        </div>
+                        <div class="case__card">
+                            <div class="case__card-img">
+                                <img class="case__card-image3" src="/Главная страница/img/case_3.svg" alt="">
+                            </div>
+                            <div class="case__card-info">
+                                <div class="case__card-title">
+                                    <p class="case__card-title-text">Партнер\франчайзи</p>
+                                    <p class="case__card-title-city"> г. Орёл</p>
+                                </div>
+                                <div class="case__line"></div>
+                                <div class="case__card-profit">
+                                </div>
+                                <div class="case__line"></div>
+                                <div class="case__card-disc">
+                                    Мне всегда нравилась идея иметь свой собственный бизнес и зарабатывать столько,
+                                    сколько
+                                    я хочу.
+                                </div>
+
+                                <button class="case__card-btn">Подробнее ></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case__more">
+                        <button class="case__more-btn"> Смотреть ещё</button>
+                    </div>
+                </div>
+            </section>
+            <section class="steps" id="steps">
+                <div class="steps__container">
+                    <h1 class="steps__title">Этапы запуска</h1>
+                    <div class="steps__item">
+                        <div class="steps__lines">
+                            <div class="steps__line-small-top"></div>
+                            <div class="steps__text">
+                                <p class="step1">1. Оставляете заявку</p>
+                                <p class="step2">2. Тест отбор</p>
+                                <p class="step3">3. Zoom созвон (2-й отбор)</p>
+                            </div>
+                            <div class="steps__line-small-top1"></div>
+                            <div class="steps__text">
+                                <p class="step1">7. Подбор команды</p>
+                                <p class="step2">8. Набор исполнителей</p>
+                                <p class="step3">9. Запуск рекламы</p>
+                            </div>
+                            <div class="steps__line-small-top2"></div>
+                            <div class="steps__text">
+                                <p class="step1">13. Масштабирование</p>
+                                <p class="step2">14. Делегирование</p>
+                                <p class="step3">15. Выход > 10 тыс $ чистыми</p>
+                            </div> 
+                        </div>
+                        <div class="main__lines">
+                            <div class="dashed__line"></div>
+                            <div class="steps__line">
+                            </div>
+                            <div class="steps__circle"></div>
+                            <div class="steps__circle1"></div>
+                            <div class="steps__circle2 circle"></div>
+                            <div class="steps__circle3 circle"></div>
+                            <div class="steps__circle4 circle"></div>
+                            <div class="steps__line1">
+                            </div>
+                        </div>
+                        <div class="steps__lines">
+                            <div class="steps__line-small-btm"></div>
+                            <div class="steps__text">
+                                <p class="step1">4. Выбор франшизы</p>
+                                <p class="step2">5. Оплата</p>
+                                <p class="step3">6. 2 мес обучение</p>
+                            </div>
+                            <div class="steps__line-small-btm1"></div>
+                            <div class="steps__text">
+                                <p class="step1">10. Сопровождение заявок</p>
+                                <p class="step2">11. Первый заработок</p>
+                                <p class="step3">12. Систематизация процессов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="faq" id="faq">
+                <div class="faq__container">
+                    <h1 class="faq__title">Часты вопросы</h1>
+                    <div class="faq__rows">
+                        <div class="faq__row">
+                            <div class="faq__row__item">
+                                <div class="faq__row__title">
+                                    <h2>Нужен ли бюджет?</h2>
+                                    <p>+</p>
+                                </div>
+                                <div class="faq__row__disc">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                                </div>
+                            </div>
+                            <div class="faq__row__item">
+                                <div class="faq__row__title">
+                                    <h2>Нужен ли бюджет?</h2>
+                                    <p>+</p>
+                                </div>
+                                <div class="faq__row__disc">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                                </div>
+                            </div>
+                            <div class="faq__row__item">
+                                <div class="faq__row__title">
+                                    <h2>Нужен ли бюджет?</h2>
+                                    <p>+</p>
+                                </div>
+                                <div class="faq__row__disc">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq__row">
+                            <div class="faq__row__item">
+                                <div class="faq__row__title">
+                                    <h2>Нужен ли бюджет?</h2>
+                                    <p>+</p>
+                                </div>
+                                <div class="faq__row__disc">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                                </div>
+                            </div>
+                            <div class="faq__row__item">
+                                <div class="faq__row__title">
+                                    <h2>Нужен ли бюджет?</h2>
+                                    <p>+</p>
+                                </div>
+                                <div class="faq__row__disc">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                                </div>
+                            </div>
+                            <div class="faq__row__item">
+                                <div class="faq__row__title">
+                                    <h2>Нужен ли бюджет?</h2>
+                                    <p>+</p>
+                                </div>
+                                <div class="faq__row__disc">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq__row">
+                            <div class="faq__row__item">
+                                <div class="faq__row__title">
+                                    <h2>Нужен ли бюджет?</h2>
+                                    <p>+</p>
+                                </div>
+                                <div class="faq__row__disc">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                                </div>
+                            </div>
+                            <div class="faq__row__item">
+                                <div class="faq__row__title">
+                                    <h2>Нужен ли бюджет?</h2>
+                                    <p>+</p>
+                                </div>
+                                <div class="faq__row__disc">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                                </div>
+                            </div>
+                            <div class="faq__row__item">
+                                <div class="faq__row__title">
+                                    <h2>Нужен ли бюджет?</h2>
+                                    <p>+</p>
+                                </div>
+                                <div class="faq__row__disc">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="share" id="share">
+                <div class="share__container">
+                    <h1 class="share__title">Акция</h1>
+                    <div class="share__info">
+                        <h2>Вступите бесплатно в наше сообщество</h2>
+                        <div class="share__info__card">
+                            <div class="share__info__card__text">
+                                <p>И участвуйте бесплатно в наших:</p>
+                                <div class="share__info__card__disc">
+                                    <div class="share__info__card__disc__row">
+                                        <p>- Вебинарах</p>
+                                        <p>- Zoom разборах</p>
+                                    </div>
+                                    <div class="share__info__card__disc__row">
+                                        <p>- Розыгрышей франшиз </p>
+                                        <p>- Реалити</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="share__info__card__owner">
+                                <div class="share__img__container">
+                                    <img class="share__image__container" src="/Главная страница/img/photo1.png" alt="">
+                                    <div class="share__img__circle"></div>
+                                </div>
+                                <div class="share__info__card__owner__text">
+                                    <h1>Ринаджи - </h1>
+                                    <p>Основатель проекта</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="share__info__input">
+                            <div class="share__input__name">
+                                <p>Введите имя</p>
+                                <input type="text" name="" id="name" placeholder="Имя Фамилия">
+                            </div>
+                            <div class="share__input__name">
+                                <p>Введите номер телефона</p>
+                                <input type="text" name="" id="phone" placeholder="+7 999 888 77 55">
+                            </div>
+                            <button class="share__info__button">Вступить бесплатно</button>
+                        </div>
+                        <div class="share__agree">
+                            <input type="checkbox">
+                            <p>Я даю согласие на обработку персональных данных и соглашаюсь с <a class="share__agree__link" href="#">политикой конфиденциальности</a></p>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+    <footer class="footer">
+        <div class="footer__row">
+            <p>Все права защищены.</p>
+            <p>© «Франшизы PRO», 2023</p>
+            <div class="footer__row__img">
+                <a href="#"><img src="/Главная страница/img/mdi_instagram.svg" alt=""></a>
+                <a href="#"><img src="/Главная страница/img/ic_baseline-facebook.svg" alt=""></a>
+                <a href="#"><img src="/Главная страница/img/mdi_youtube.svg" alt=""></a>
+                <a href="#"><img src="/Главная страница/img/ic_baseline-telegram.svg" alt=""></a>
+                <a href="#"><img src="/Главная страница/img/uil_vk.svg" alt=""></a>
+                <a href="#"><img src="/Главная страница/img/ic_baseline-tiktok.svg" alt=""></a>
+            </div>
+            <p>Казахстан, Алматы, Назарбаева 248, БЦ Сарканд</p>
+            <p>info@franshizi.pro</p>
+            <p>+77073366665</p>
+        </div>
+        <div class="footer__row">
+            <p>Индивидуальный предприниматель:</p>
+            <p>ИП Ринаджи</p>
+            <p>БИН 891219300532</p>
+            <p>ОГРНИП _</p>
+            <p>Рас. счет: _</p>
+            <p>АО «Тинькофф Банк»</p>
+            <p>БИК _</p>
+            <p>ИНН банка _</p>
+            <p>Корр. счет: _</p>
+        </div>
+        <div class="footer__row">
+            <a  href="#"><p class="footer__row__link">Договор оферты</p></a>
+            <a  href="#"><p class="footer__row__link">Политика обработки ПД</p></a>
+            <a  href="#"><p class="footer__row__link">Согласие на обработку ПД</p></a>
+            <a  href="#"><p class="footer__row__link">Согласие на рекламную рассылку</p></a>
+        </div>
+    </footer>
 
-    <script src="/js/slider.js"></script>
-
+    <script src="./js/slider.js"></script>
+    <script src="./js/faq.js"></script>
+    <script src="./js/navbar.js"></script>
 </body>
 
 </html>
