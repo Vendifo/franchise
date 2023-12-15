@@ -1,0 +1,1021 @@
+:root {
+    --absolute-white: #FFF;
+    --absolute-black: #000;
+    --background: #0B0B0D;
+    --grey-text: #BABABA;
+    --theme-blue: #0ff;
+}
+
+body {
+    font-family: 'Gilroy Regular', sans-serif;
+    background-color: var(--background);
+}
+
+.wrapper {
+    display: flex;
+
+
+
+
+}
+
+
+/* navbar */
+
+.navbar {
+    width: 300px;
+    background-color: #2D2D2D;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+}
+
+.navbar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.navbar::-webkit-scrollbar-thumb {
+    background-color: #afafaf;
+    /* цвет полосы прокрутки */
+    border-radius: 6px;
+    /* закругление углов полосы прокрутки */
+}
+
+.navbar::-webkit-scrollbar-track {
+    background-color: #2D2D2D;
+    /* цвет фона полосы прокрутки */
+}
+
+.navbar__container {
+    padding: 48px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--grey-text);
+}
+
+.navbar__logo {
+    padding-bottom: 48px;
+}
+
+.navbar__city {
+    margin-bottom: 48px;
+    border: 1px solid var(--theme-blue);
+    border-radius: 13px;
+}
+
+.navbar__city div {
+    display: flex;
+    align-items: center;
+    padding: 15px 14px;
+}
+
+.navbar__city div span {
+    padding-right: 10px;
+}
+
+.navbar__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.navbar__list a {
+    color: var(--absolute-white);
+
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 17.657px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.navbar__list .navbar__item-active {
+    color: var(--theme-blue);
+    font-weight: 700;
+
+}
+
+.navbar__phone {
+    padding: 57px 0 21px;
+
+    color: var(--absolute-white);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 24.448px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.navbar__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 21px 16px;
+}
+
+.navbar__buttons button {
+    display: inline-flex;
+    padding: 15.6px 19.5px;
+    justify-content: center;
+    align-items: center;
+    text-wrap: nowrap;
+
+    border-radius: 9.75px;
+    background-color: var(--absolute-white);
+    box-shadow: 0px 3.9px 3.9px 0px rgba(0, 0, 0, 0.25);
+
+    color: var(--absolute-black);
+    font-family: Gilroy;
+    font-size: 17.657px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.navbar__buttons .navbar__button-active {
+    background: var(--theme-blue);
+}
+
+/* main */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    padding: 100px 30px 0 330px;
+    margin: 0 auto;
+}
+
+/* trafficGeneration */
+
+.trafficGeneration {
+    display: flex;
+    flex-direction: column;
+}
+
+.trafficGeneration__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+
+.trafficGeneration__info {
+    display: flex;
+    gap: 22px;
+}
+
+.trafficGeneration__subcontainer {
+    max-width: 740px;
+    max-height: 421px;
+    border-radius: 30px;
+    background: #2A2A2A;
+    padding: 34px 0 25px 24px;
+}
+
+.trafficGeneration__subcontainer h1 {
+
+    color: var(--absolute-white);
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 110%;
+    padding-bottom: 95px;
+}
+
+.trafficGeneration__subcontainer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.trafficGeneration__subcontainer-row {
+    display: flex;
+    gap: 10px;
+
+}
+
+.trafficGeneration__subcontainer-row div {
+
+    width: 265px;
+    text-wrap: nowrap;
+    padding: 14px;
+    border-radius: 60px;
+    border: 1px solid #FFF;
+
+    color: #FFF;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.trafficGeneration__imgcontainer {
+    max-width: 356px;
+    position: relative;
+    background-color: #2D2D2D;
+    border-radius: 60px;
+}
+
+.trafficGeneration__imgcontainer-text {
+    margin: 280px 32px 0;
+}
+
+.trafficGeneration__imgcontainer-blur {
+    width: 100%;
+    height: 184px;
+    flex-shrink: 0;
+    background: rgba(11, 11, 13, 0.80);
+    position: absolute;
+    bottom: -60px;
+    filter: blur(41.5px);
+
+}
+
+
+.trafficGeneration__imgcontainer h1 {
+    z-index: 200;
+    color: var(--absolute-white);
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+    z-index: 4;
+}
+
+.trafficGeneration__imgcontainer p {
+    color: #E9E9E9;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    position: relative;
+    z-index: 4;
+}
+
+.trafficGeneration__imgcontainer img {
+
+    position: absolute;
+    transform: scale(1.15);
+    top: 43px;
+    left: 0;
+    z-index: 0;
+}
+
+.trafficGeneration__imgcontainer-row {
+    display: flex;
+    gap: 5px;
+    margin: 32px 30px;
+
+}
+
+.trafficGeneration__imgcontainer-row div {
+    position: relative;
+    width: 55.4px;
+    height: 4px;
+    flex-shrink: 0;
+
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.70);
+    z-index: 4;
+}
+
+.trafficGeneration__imgcontainer-row .trafficGeneration__imgcontainer-row-active {
+    background-color: var(--absolute-white);
+}
+
+.trafficGeneration__button {
+    margin-top: 80px;
+    position: relative;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.trafficGeneration__btn {
+    display: flex;
+    width: 376px;
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    background: var(--theme-blue);
+
+    color: var(--absolute-black);
+    font-size: 24px;
+    font-weight: 700;
+    /* box-shadow: 1px 5px 10px 5px rgba(0, 255, 255, 0.05); */
+}
+
+.trafficGeneration__btn::before {
+    content: "";
+    /* Создаем псевдоэлемент для тени */
+    position: absolute;
+    top: -5px;
+    /* Регулируем отступы тени от элемента */
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+    /* Помещаем тень за основной элемент */
+    background-color: rgba(0, 255, 255, 0.2);
+    /* Цвет тени с прозрачностью */
+    border-radius: 20px;
+    /* Радиус скругления для создания эффекта свечения */
+    filter: blur(10px);
+    /* Размытие тени */
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);/
+}
+
+.trafficGeneration__button img {
+    position: absolute;
+    left: 320px;
+    top: -70px;
+}
+
+.trafficGeneration__button p {
+    color: var(--absolute-white);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.trafficGeneration__button a {
+    color: var(--theme-blue);
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration-line: underline;
+}
+
+/* rates */
+
+.rates__title {
+    color: var(--absolute-white);
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.rates__info {
+
+    border-radius: 20px;
+    background: #2A2A2A;
+    box-shadow: 0px 4px 31px 0px #000;
+}
+
+.rates__info h1 {
+    padding: 25px 0 0 50px;
+    color: var(--absolute-white);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 139.894%;
+}
+
+.rates__info-grid {
+    padding: 25px 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.rates__info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 250px;
+}
+
+.rates__info-item {
+    width: 340px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rates__info-item div {
+    width: 13.333px;
+    height: 13.333px;
+
+    border-radius: 2.667px;
+    background: var(--absolute-white);
+}
+
+.rates__info-item p {
+    color: var(--absolute-white);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 135.6%;
+}
+
+.rates__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 23px;
+    margin-top: 220px;
+
+}
+
+.rates__content-card {
+    font-family: Gilroy;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.card__standart {
+    background-color: #555;
+    box-shadow: 4px 4px 24px 0px rgba(0, 0, 0, 0.10);
+    width: 330px;
+    height: 402px;
+}
+
+.card__exclusive {
+    background: #393939;
+    box-shadow: 4px 4px 24px 0px rgba(0, 0, 0, 0.10);
+    width: 330px;
+    height: 402px;
+}
+
+.card__garant {
+    background: #282828;
+    width: 330px;
+    height: 592px;
+    box-shadow: 4px 4px 24px 0px rgba(0, 0, 0, 0.10);
+}
+
+.rates__content-card img {
+    position: absolute;
+    bottom: 570px;
+    margin-left: 90px;
+
+}
+
+.rates__content-title {
+    border-radius: 20px;
+
+}
+
+.standart {
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.20);
+}
+
+.exclusive {
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.60);
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.20);
+}
+
+.garant {
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.70);
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.20);
+}
+
+
+.rates__content-title h1 {
+    padding: 42px 100px;
+    color: #FFF;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.rates__content-price {
+    display: flex;
+    flex-direction: column;
+    width: 158px;
+    align-items: center;
+    margin: 0 auto;
+
+
+}
+
+.rates__content-price-now {
+    background-color: var(--absolute-white);
+    display: inline-flex;
+    padding: 5px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    position: absolute;
+    top: 95px;
+
+    color: #0B0B0D;
+    font-family: Gilroy;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    /* 28.6px */
+}
+
+.rates__content-price-past {
+    background-color: #303030;
+    color: var(--absolute-white);
+    display: inline-flex;
+    padding: 10px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    margin-top: 10px;
+    text-decoration-line: line-through;
+    text-wrap: nowrap;
+
+    color: var(--absolute-white);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.rates__content-disc {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    text-align: center;
+}
+
+.rates__content-contribution {
+    color: var(--absolute-white);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.rates__content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: start;
+    margin-left: 41px;
+}
+
+.rates__content-info-element {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-wrap: nowrap;
+}
+
+.rates__content-info-element div {
+    width: 12px;
+    height: 12px;
+    max-height: 16px;
+    border-radius: 2px;
+    background-color: var(--absolute-white);
+}
+
+.rates__content-info-element p {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.rates__content-disc-button {
+    /* box-shadow: 1px 5px 10px 5px rgba(0, 255, 255, 0.09); */
+    display: flex;
+    width: 250px;
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999;
+    border-radius: 10px;
+    background: var(--theme-blue);
+    color: var(--absolute-black);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.rates__content-disc-button::before {
+    content: "";
+    /* Создаем псевдоэлемент для тени */
+    position: absolute;
+    top: -5px;
+    /* Регулируем отступы тени от элемента */
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+    /* Помещаем тень за основной элемент */
+    background-color: rgba(0, 255, 255, 0.2);
+    /* Цвет тени с прозрачностью */
+    border-radius: 20px;
+    /* Радиус скругления для создания эффекта свечения */
+    filter: blur(10px);
+    /* Размытие тени */
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);/
+}
+
+.rates__content-royalty {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+/*------------------------------------------------ ROYALTY ---------------------------------------- */
+.royalty__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.royalty__title {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.royalty__card {
+    border-radius: 20px;
+    background: #2A2A2A;
+    box-shadow: 4px 4px 24px 0px rgba(0, 0, 0, 0.10);
+    color: var(--absolute-white);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    height: 267px;
+    width: 336px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__team {
+    display: flex;
+    border-radius: 20px;
+    background: #2A2A2A;
+    box-shadow: 4px 4px 24px 0px rgba(0, 0, 0, 0.10);
+    color: var(--absolute-white);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    display: flex;
+}
+
+.card__team-title {
+    border-radius: 20px 20px 0px 20px;
+    background: #2A2A2A;
+    box-shadow: 4px 4px 24px 0px rgba(0, 0, 0, 0.10);
+    width: 450px;
+
+}
+
+.card__team-title-disc {
+    margin: 13px 0 0 24px;
+}
+
+.card__team-title-head {
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    padding-bottom: 13px;
+    border-bottom: #636363 1px solid;
+}
+
+.card__team-title-head1 {
+    padding: 23px 0 0 24px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card__team-title-head-number {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    width: 39px;
+    height: 39px;
+    text-align: center;
+    padding: 7px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 11px 11px 0 20px;
+}
+
+.card__team-disc {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.card__row {
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: var(--absolute-white);
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.card__rows {
+    display: flex;
+    margin-left: 34px;
+    margin-top: 32px;
+    gap: 97px;
+}
+
+.card__row-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.card__row-item p {
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.card__row-circle {
+    width: 4px;
+    height: 4px;
+    border: 1px solid var(--absolute-white);
+    background-color: var(--absolute-white);
+    border-radius: 2px;
+    color: var(--absolute-white);
+}
+
+.card__team-disc-foot {
+    margin-top: 25px;
+    background-color: #232323;
+    border-radius: 0px 0px 20px 0px;
+    width: 100%;
+    height: 55px;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    z-index: 1;
+}
+
+.card__team-disc-foot p {
+    margin: 16px 0 0 35.5px;
+}
+
+.royalty__card-title-head {
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    padding-bottom: 13px;
+    border-bottom: #636363 1px solid;
+    justify-content: space-between;
+}
+
+.royalty__card-title-head1 {
+    padding: 23px 0 0 24px;
+    font-size: 24px;
+    font-weight: 600;
+    width: 200px;
+}
+
+.royalty__card-title-head-number {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    width: 39px;
+    height: 39px;
+    text-align: center;
+    padding: 7px 7px 7px 6px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 11px 15px 0 0;
+    display: flex;
+
+}
+
+.royalty__cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.royalty__card-disc {
+    position: relative;
+    margin: 14px 0 0 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.royalty__card-disc-info {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-left: 23px;
+
+}
+
+.royalty__card-foot {
+
+    background-color: #232323;
+    border-radius: 0px 0px 20px 20px;
+    height: 55px;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.royalty__card-foot p {
+    margin: 0;
+    color: white;
+}
+
+/* --------------------------poush---------------------------------------------------- */
+.poush__title {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.poush__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+}
+
+.poush__item {
+    border-radius: 20px;
+    background: #2A2A2A;
+    box-shadow: 4px 4px 24px 0px rgba(0, 0, 0, 0.10);
+    color: var(--absolute-white);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    width: 336px;
+    display: flex;
+    flex-direction: column;
+}
+
+.poush__mat {
+    height: 430px;
+}
+
+.poush__bis {
+    height: 280px;
+}
+
+.poush__start {
+    height: 200px;
+}
+
+.poush__item-title {
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    padding-bottom: 13px;
+    border-bottom: #636363 1px solid;
+    justify-content: space-between;
+}
+
+.poush__item-title-text {
+    padding: 23px 0 0 24px;
+    font-size: 24px;
+    font-weight: 600;
+    width: 250px;
+}
+
+.poush__item-title-number {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    width: 39px;
+    height: 39px;
+    text-align: center;
+    padding: 7px 7px 7px 6px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 11px 15px 0 0;
+    display: flex;
+}
+
+.poush__item-disc {
+    font-family: Gilroy;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    /* 23.4px */
+    margin: 16px 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.poush__item-price {
+    background-color: #232323;
+    border-radius: 0px 0px 20px 20px;
+    height: 55px;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+/* -------------------------------profit---------------------------- */
+.profit__title {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.profit__func {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.profit__func-var {
+    border-radius: 70px;
+    background: #0C191B;
+    color: var(--theme-blue);
+    padding: 10px;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    position: relative;
+    /* 19.8px */
+}
+
+.active { 
+    border: 1px solid var(--theme-blue);
+}
+
+.active::before { 
+    content: "";
+    /* Создаем псевдоэлемент для тени */
+    position: absolute;
+    top: -5px;
+    /* Регулируем отступы тени от элемента */
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+    /* Помещаем тень за основной элемент */
+    background-color: rgba(0, 255, 255, 0.2);
+    /* Цвет тени с прозрачностью */
+    border-radius: 20px;
+    /* Радиус скругления для создания эффекта свечения */
+    filter: blur(10px);
+    /* Размытие тени */
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);/
+}
+
+.profit__content-calc-slider {
+    text-align: center;
+  }
+  
+  .slider {
+    width: 300px;
+  }
